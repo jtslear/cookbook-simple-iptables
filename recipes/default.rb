@@ -62,6 +62,7 @@ end
 # iptables* (ipv4) and ip6tables* (ipv6)
 v2s = {'ipv4' => '', 'ipv6' => '6'}
 
+iptable_rules = ""
 node["simple_iptables"]["ip_versions"].each do |ip_version|
   v = v2s[ip_version]
   case node['platform_family']
